@@ -73,7 +73,7 @@ function ImageUpload() {
   const fileInputRef = useRef(null);
   
   // Dynamic base URL that works in both development and production
-  const BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5002';
+  const BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5002';
 
   // Handle paste event for images
   const handlePaste = async (event) => {
